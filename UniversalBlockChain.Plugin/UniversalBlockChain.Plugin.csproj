@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chain.Library\UniversalBlockChain.Library.csproj" />
+    <ProjectReference Include="..\UniversalBlockChain.Library\UniversalBlockChain.Library.csproj" />
   </ItemGroup>
 
 </Project>
