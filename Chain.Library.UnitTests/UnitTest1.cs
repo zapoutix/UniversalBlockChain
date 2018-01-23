@@ -2,7 +2,7 @@ using MessagePack;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace Chain.Library.UnitTests
+namespace UniversalBlockChain.Library.UnitTests
 {
     [TestClass]
     public class UnitTest1

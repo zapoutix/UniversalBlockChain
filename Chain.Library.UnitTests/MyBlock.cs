@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Chain.Library.UnitTests
+namespace UniversalBlockChain.Library.UnitTests
 {
     [MessagePackObject(keyAsPropertyName: true)]
     public class MyBlock : BaseBlock

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Chain.Library
+namespace UniversalBlockChain.Library
 {
     [MessagePackObject(keyAsPropertyName: true)]
     public abstract class BaseBlock : IBlock
