@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UniversalBlockChain.Library.Contracts;
+using UniversalBlockChain.Library.Services;
 
 namespace UniversalBlockChain.Plugin.Controllers
 {
@@ -12,7 +13,8 @@ namespace UniversalBlockChain.Plugin.Controllers
         [HttpGet("peers")]
         public System.Web.Mvc.JsonResult GetPeers()
         {
-            return "Hello from Index method of Home Controller";
+            var peers = PeerManager.Instance.GetPeers();
+            return Json(peers);
         }
 
         [HttpPost("peers")]

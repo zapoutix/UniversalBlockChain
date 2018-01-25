@@ -20,6 +20,11 @@ namespace UniversalBlockChain.Library.Services
             }
         }
 
+        public IEnumerable<Peer> GetPeers()
+        {
+            return Peers;
+        }
+
         public PeerManager()
         {
             Peers = new List<Peer>();
