@@ -7,8 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MessagePack" Version="1.7.3.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Protocol\" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
   </ItemGroup>
 </Project>

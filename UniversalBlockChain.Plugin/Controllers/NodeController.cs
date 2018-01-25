@@ -1,13 +1,25 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Web.Mvc;
 using UniversalBlockChain.Library.Contracts;
 
 namespace UniversalBlockChain.Plugin.Controllers
 {
-    [Microsoft.AspNetCore.Mvc.Route("UBC")]
-    public class NodeController : Controller, INodeController
+    [Route("UBC")]
+    public class NodeController : System.Web.Mvc.Controller, INodeController
     {
+        [HttpGet("peers")]
+        public System.Web.Mvc.JsonResult GetPeers()
+        {
+            return "Hello from Index method of Home Controller";
+        }
+
+        [HttpPost("peers")]
+        public IActionResult PostPeer()
+        {
+            return new OkResult();
+        }
+
     }
 }

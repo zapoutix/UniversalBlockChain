@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using FastDeepCloner;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Runtime.Loader;
 using System.Web.Http;
 using System.Web.Mvc;
 
@@ -29,11 +31,13 @@ namespace UniversalBlockChain.Deamon
         public void ConfigureServices(IServiceCollection services)
         {
             var builder = services.AddMvc();
+            var assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(@"PATH\ExternalControllers.dll");
+            var types = assembly.GetTypes();
+            foreach (var type in types)
+            {
+            }
             //Load Plugin
-//            builder.AddApplicationPart(
-//    AssemblyLoadContext.Default.LoadFromAssemblyPath(
-//        @"PATH\ExternalControllers.dll"
-//));
+            builder.AddApplicationPart(AssemblyLoadContext.Default.LoadFromAssemblyPath(@"PATH\ExternalControllers.dll"));
         }
 
         public void Configure(IApplicationBuilder app)
